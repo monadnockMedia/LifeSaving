@@ -1,0 +1,216 @@
+
+
+/*- Style Sheet for Life Saving -*/
+
+
+/*- Overall Page Formatting -*/
+* {
+	margin:0;
+	padding:0;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+html, body
+{
+	width:1280px;
+	height:1024px;
+	background-color:black;
+	background-repeat:no-repeat;
+	font-size:16pt;
+	color:white;
+	background-image:url('../IMAGES/Screen3_2.png');
+}
+
+body.wholeMap {
+	background-image:url('../IMAGES/Screen1.png');
+}
+
+h2 {
+	font-size:24px;
+}
+
+p {
+	margin-left:10px;
+}
+
+
+
+.hidden
+{
+	display:none;
+}
+
+.mapTitle {
+	top:120px;
+	left:-1280px;
+	position:absolute;
+	width:1280px;
+	height:316px;
+	z-index:3;
+	background-repeat:no-repeat;
+	background-image:url('../IMAGES/Bookmark.png');
+	color:white;
+}
+
+.mapTitle h1 {
+	font-size:4em;
+	margin-left:200px;
+	margin-top: 75px;
+	color:white;
+}
+
+.btmDiv {
+	top:850px;
+	position:absolute;
+	width:1280px;
+	height:150px;
+	z-index:3;
+}
+
+.backBttn {
+	width:201px;
+	height:81px;
+	margin-top:33px;
+	margin-left:25px;
+	float:left;
+	background-repeat:no-repeat;
+	background-image:url('../IMAGES/BackArrow.png');
+	pointer-events:all;
+}
+
+.nextBttn {
+	width:1280px;
+	height:1024px;
+	position:absolute;
+	top:10px;
+	left:10px;
+	opacity:0;
+	z-index:2;
+	background-repeat:no-repeat;
+}
+
+.nextBttn.Superior {
+	background-image:url('../IMAGES/Screen2Superior.png');
+}
+
+.nextBttn.Michigan {
+	background-image:url('../IMAGES/Screen2Michigan.png');
+}
+
+.nextBttn.Huron {
+	background-image:url('../IMAGES/Screen2Huron.png');
+}
+
+.nextBttn.Erie {
+	background-image:url('../IMAGES/Screen2Erie.png');
+}
+
+.nextBttn.Ontario {
+	background-image:url('../IMAGES/Screen2Ontario.png');
+}
+
+
+/* Lake Selectors on Map */
+.mapBttn {
+	width:240px;
+	height:180px;
+	position:absolute;
+	z-index:3;
+	background-color:transparent;
+	opacity:0.75;
+}
+
+.mapBttn.Superior {
+	top:120px;
+	left:100px;
+	width:500px;
+	height:230px;
+}
+
+.mapBttn.Michigan {
+	top:380px;
+	left:330px;
+	height:460px;
+}
+
+.mapBttn.Huron {
+	top:380px;
+	left:600px;
+	width:330px;
+	height:325px;
+}
+
+.mapBttn.Erie {
+	top:725px;
+	left:700px;
+	height:150px;
+	width:320px;
+}
+
+.mapBttn.Ontario {
+	top:550px;
+	left:955px;
+	height:150px;
+	width:260px;
+}
+
+.adaBttn {
+	width:63px;
+	height:67px;
+	margin-top:40px;
+	margin-right:25px;
+	float:right;
+	background-repeat:no-repeat;
+	background-image:url('../IMAGES/Handicap.png');
+	pointer-events:all;
+}
+
+
+/* Report Details Screen */
+.dateContainer {
+	width:460px;
+	height: 650px;
+	position:absolute;
+	top:225px;
+	left:-460px;
+	opacity:0;
+	padding:0px;
+	background-repeat:no-repeat;
+	background-image:url('../IMAGES/Ribbon2.png');
+}
+
+.dates {
+	color:#D9D9D9;
+}
+
+.excerpt {
+	width:745px;
+	height: 855px;
+	position:absolute;
+	top:150px;
+	left: 475px;
+	opacity:0;
+	color:black;
+}
+
+.excerpt p {
+	font-size:1.5em;
+	padding:25px;
+}
+
+.report {
+	z-index:5;
+}
+
+.report.selected {
+	text-shadow:0px 0px 7px yellow;
+	color:#FFFDCC;
+	z-index:5;
+}
+
+.disableClick {
+	pointer-events:none;
+}
+

@@ -1,0 +1,14 @@
+.scroll-content {position:absolute;top:0;left:0;width:420px;padding:20px;}
+.scroll-pane{position:relative;}
+.slider-wrap{position:absolute;right:0;top:0;background-color:GhostWhite;width:20px;z-index:20;opacity:0.75;}
+.slider-vertical{position:relative;height:100%;}
+.ui-slider-handle{background-color:SlateGray;width:20px;height:5px;margin:0 auto;display:block;position:absolute;z-index:20;}
+.ui-slider-handle img{border:none;z-index:20;}
+.scrollbar-top{position:absolute;top:0;z-index:20;}
+.scrollbar-bottom{position:absolute;bottom:0;z-index:20;}
+.scrollbar-grip{position:absolute;top:50%;z-index:20;}
+.scroll-container{overflow:visible;}
+
+.ui-slider-handle:focus {
+	outline:-webkit-focus-ring-color auto 0px;
+}
