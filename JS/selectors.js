@@ -36,9 +36,13 @@ function clearMap() {
 	$(".nextBttn").removeClass("Superior Michigan Huron Erie Ontario");
 }
 
+function setMap() {
+
+}
+
 /*-- - --*/
 
-$("body").on( "click", ".report", function() {
+/*$("body").on( "click", ".report", function() {
 	$(".report").removeClass("selected");
 	$(this).addClass("selected");
 	
@@ -49,7 +53,7 @@ $("body").on( "click", ".report", function() {
 	});
 	
 	console.log($(".selected").offset());
-})
+})*/
 
 $(".mapBttn").click(function(e) {
 	if (currentScreen == 0) {
@@ -85,8 +89,9 @@ $(".mapBttn").click(function(e) {
 				$( ".mapTitle" ).append( "<h1>Lake Ontario</h1>" );
 				$(".nextBttn").addClass("Ontario");
 			}
-		
+
 		$( ".dates" ).empty();
+
 		ajResp = $.ajax(ajSettings).done(function( html ) {
 			$( ".dates" ).append( html );
 			$('.scroll-pane').sbscroller('refresh');
@@ -94,7 +99,8 @@ $(".mapBttn").click(function(e) {
 			$( ".report" ).first().addClass("selected");
 			loadFirstExcerpt();
 		});
-})
+	}
+});
 
 $(".backBttn").click(function(e) {
 	if (currentScreen == 1) {
@@ -114,7 +120,7 @@ $(".backBttn").click(function(e) {
 		currentScreen = 0;
 		$(".nextBttn").toggleClass("disableClick");
 	}
-})
+});
 
 $(".nextBttn").click(function(e) {
 	if (currentScreen == 1) {
@@ -129,4 +135,4 @@ $(".nextBttn").click(function(e) {
 		$(this).toggleClass("disableClick");
 		$("body").toggleClass("wholeMap");
 	}
-})
+});
