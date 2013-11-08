@@ -28,7 +28,10 @@
 	  }  
 	  else if (options === 'reset') {
 		$(this).find('.slider-vertical').slider({ value: 100 });
-	  } 
+	  }
+	  else if (options === 'value') {
+		$(this).find('.slider-vertical').slider( "value", 55 );
+	  }
 	  else {
 		  if ( options ) { 
 			$.extend( settings, options );
@@ -37,7 +40,6 @@
 		  $(this).contents().wrapAll('<div class="scroll-content"/>');
 		  setSlider($(this));
 	  }
-	  
     });
 	
 	function setSlider($scrollpane){
@@ -79,18 +81,25 @@
 			   //set up the slider 
 			   $scrollpane.find('.slider-vertical').slider({
 				  orientation: 'vertical',
+				  step: 1,
+				  animate: "slow",
 				  min: 0,
 				  max: 100,
 				  value: sliderInitial,
 				  slide: function(event, ui) {
 					 var topValue = -((100-ui.value)*difference/100);
 					 $scrollpane.find('.scroll-content').css({top:topValue});//move the top up (negative value) by the percentage the slider has been moved times the difference in height
+				  	 //i added this
+					 $( "#slider-value" ).html( ui.value );
 				  },
 				  change: function(event, ui) {
 				  var topValue = -((100-ui.value)*($scrollpane.find('.scroll-content').height()-$scrollpane.height())/100);//recalculate the difference on change
 					 $scrollpane.find('.scroll-content').css({top:topValue});//move the top up (negative value) by the percentage the slider has been moved times the difference in height
 				  }	  
 			   });
+				
+				//i added this
+				$( "#slider-value" ).html(  $('.slider-vertical').slider('value') );
 			
 			   //set the handle height and bottom margin so the middle of the handle is in line with the slider
 			   $scrollpane.find(".ui-slider-handle").css({height:handleHeight,'margin-bottom':-0.5*handleHeight});
@@ -101,7 +110,7 @@
 			   $scrollpane.find(".ui-slider-range").css({top:-sliderMargin});//position the slider-range div at the top of the slider container
 			   
 			   //create elements to hold the images for the scrollbar handle if needed
-			   if(settings.handleImage) $scrollpane.find(".ui-slider-handle").css({backgroundImage:'url('+settings.handleImage+')',backgroundRepeat:'repeat-y'});
+			   if(settings.handleImage) $scrollpane.find(".ui-slider-handle").css({backgroundImage:'url('+settings.handleImage+')',backgroundRepeat:'no-repeat'});
 			   if(settings.handleTopImage) $scrollpane.find(".ui-slider-handle").append('<img class="scrollbar-top" src="'+settings.handleTopImage+'"/>');
 			   if(settings.handleBottomImage) $scrollpane.find(".ui-slider-handle").append('<img class="scrollbar-bottom" src="'+settings.handleBottomImage+'"/>');
 			   if(settings.handleGripImage) {
