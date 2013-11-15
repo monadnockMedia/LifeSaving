@@ -93,9 +93,10 @@
 					 $( "#slider-value" ).html( ui.value );
 				  },
 				  change: function(event, ui) {
-				  var topValue = -((100-ui.value)*($scrollpane.find('.scroll-content').height()-$scrollpane.height())/100);//recalculate the difference on change
+				     var topValue = -((100-ui.value)*($scrollpane.find('.scroll-content').height()-$scrollpane.height())/100);//recalculate the difference on change
 					 $scrollpane.find('.scroll-content').css({top:topValue});//move the top up (negative value) by the percentage the slider has been moved times the difference in height
-				  }	  
+				     
+				  }
 			   });
 				
 				//i added this

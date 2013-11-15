@@ -95,6 +95,10 @@ p {
 	pointer-events:all;
 }
 
+.backBttn:active {
+	background-image:url('../IMAGES/BackArrow_Touched.png');
+}
+
 .nextBttn {
 	width:1280px;
 	height:1024px;
@@ -182,6 +186,10 @@ p {
 	pointer-events:all;
 }
 
+.adaBttn:active {
+	background-image:url('../IMAGES/Handicap_Touched.png');	
+}
+
 
 /* Report Details Screen */
 .dateContainer {
@@ -195,36 +203,46 @@ p {
 	background-repeat:no-repeat;
 	background-image:url('../IMAGES/Ribbon3.png');
 	overflow:visible;
+	pointer-events:none;
 }
 
 .dates {
 	color:#dbd4b6;
-	margin-left:50px;
+	margin-left:40px;
+	pointer-events:none;
 }
 
-.excerpt {
+.reports {
 	width:745px;
 	height: 855px;
 	position:absolute;
 	top:150px;
 	left: 475px;
-	opacity:0;
+	opacity:1;
 	color:black;
 }
 
-.excerpt p {
-	font-size:1.5em;
+.report p {
+	font-size:1.35em;
 	padding:25px;
 }
 
-.report {
-	z-index:5;
+.report img {
+	margin-left:15px;
 }
 
-.report.selected {
+.summary {
+	z-index:10;
+	line-height:1em;
+	margin-top:20px;
+	margin-bottom:25px;
+	pointer-events:all;
+}
+
+.summary.selected {
 	text-shadow:0px 0px 7px yellow;
 	color:#FFFDCC;
-	z-index:5;
+	pointer-events:all;
 }
 
 .disableClick {

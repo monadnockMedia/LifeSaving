@@ -1,12 +1,12 @@
-.scroll-content {position:absolute;top:0;left:0;width:420px;padding:20px;}
-.scroll-pane{position:relative;}
-.slider-wrap{position:absolute;right:23px;top:0px;background-color:transparent;width:75px;z-index:20;opacity:1;}
+.scroll-content {position:absolute;top:0;left:0;width:420px;padding:20px;pointer-events:none;}
+.scroll-pane{position:relative;pointer-events:none;}
+.slider-wrap{position:absolute;right:23px;top:0px;background-color:transparent;width:75px;z-index:20;opacity:1;pointer-events:none;}
 .slider-vertical{position:relative;height:100%;opacity:1;}
 .ui-slider-handle{background-color:transparent;width:75px;height:5px;margin:0 auto;display:block;position:absolute;z-index:20;}
 .ui-slider-handle img{border:none;z-index:20;}
 .scrollbar-top{position:absolute;top:0;z-index:20;}
 .scrollbar-bottom{position:absolute;bottom:0;z-index:20;}
-.scrollbar-grip{position:absolute;top:50%;z-index:20;opacity:1;}
+.scrollbar-grip{position:absolute;top:50%;z-index:20;opacity:1;pointer-events:auto;}
 .scroll-container{overflow:hidden;}
 
 .ui-slider-handle:focus {
