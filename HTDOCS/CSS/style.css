@@ -3,6 +3,13 @@
 /*- Style Sheet for Life Saving -*/
 
 
+/*- Font Faces -*/
+@font-face {
+  font-family: "oldPrint";
+  src: url("../FONTS/Hoefler Text.ttc") format("truetype");
+}
+
+
 /*- Overall Page Formatting -*/
 * {
 	margin:0;
@@ -28,7 +35,7 @@ body.wholeMap {
 }
 
 h2 {
-	font-size:24px;
+	font-size:22px;
 	margin-bottom:10px;
 	margin-top:10px;
 }
@@ -54,6 +61,7 @@ p {
 	background-repeat:no-repeat;
 	background-image:url('../IMAGES/Bookmark.png');
 	color:white;
+	
 }
 
 .excerptTitle {
@@ -67,6 +75,7 @@ p {
 	color:#dbd4b6;
 	text-shadow:1px 1px 10px black, -1px -1px 40px #636e5a, -1px -1px 60px #cdd6c5;
 	opacity:0;
+	font-family:"oldPrint";
 }
 
 .mapTitle h1 {
@@ -201,15 +210,16 @@ p {
 	opacity:0;
 	padding:0px;
 	background-repeat:no-repeat;
-	background-image:url('../IMAGES/Ribbon3.png');
+	background-image:url('../IMAGES/Ribbon5.png');
 	overflow:visible;
 	pointer-events:none;
 }
 
 .dates {
 	color:#dbd4b6;
-	margin-left:40px;
+	margin-left:5px;
 	pointer-events:none;
+	padding-right:20px;
 }
 
 .reports {
@@ -228,20 +238,23 @@ p {
 }
 
 .report img {
-	margin-left:15px;
+	display: block;
+	position:relative;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .summary {
 	z-index:10;
 	line-height:1em;
-	margin-top:20px;
-	margin-bottom:25px;
+	margin-top:25px;
+	margin-bottom:75px;
 	pointer-events:all;
 }
 
 .summary.selected {
-	text-shadow:0px 0px 7px yellow;
-	color:#FFFDCC;
+	text-shadow:0px 0px 7px #636e5a;
+	color:#FFFAB5;
 	pointer-events:all;
 }
 

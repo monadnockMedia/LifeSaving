@@ -1,4 +1,5 @@
 
+
 var currentScreen = 0;
 var selectedOffset;
 var selectedCenter;
@@ -9,9 +10,6 @@ var adjustDistanceString;
 var $reportText;
 var $summaryText;
 
-//timer = setInterval(checkPosition, 1);
-
-
 
 function checkPosition() { //gets called every update when slider is moving
 	selectedOffset = $(".selected").offset();
@@ -19,12 +17,12 @@ function checkPosition() { //gets called every update when slider is moving
 	selectedCenter = (selectedHeight/2);
 	selectedMiddle = (selectedOffset.top + selectedCenter);
 	
-	if (selectedMiddle < 240) {
+	if (selectedMiddle < 230) {
 		$(".selected").animate({opacity:0.01}, 150, function() {});
 		$(".selected + .summary").addClass("selected");
 		$(".selected").first().removeClass("selected");
 		loadExcerpt();
-	} else if (selectedMiddle > 430) {
+	} else if (selectedMiddle > 440) {
 		$(".selected").prev().addClass("selected");
 		$(".selected").last().removeClass("selected");
 		$(".selected").animate({opacity:1}, 150, function() {});
@@ -32,11 +30,14 @@ function checkPosition() { //gets called every update when slider is moving
 	}
 }
 
+
 function clearMap() {
 	$(".nextBttn").removeClass("Superior Michigan Huron Erie Ontario");
 }
 
+
 /*-- - --*/
+
 
 $(".mapBttn").click(function(e) {
 	if (currentScreen == 0) {
@@ -53,31 +54,31 @@ $(".mapBttn").click(function(e) {
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Superior</h1>" );
 				$(".nextBttn").addClass("Superior");
-				$(".excerptTitle").append("The Waldo");
+				$(".excerptTitle").append("The <i>Waldo</i>");
 			} else if ($(this).hasClass("Michigan")) {
 				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Michigan";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Michigan</h1>" );
 				$(".nextBttn").addClass("Michigan");
-				$(".excerptTitle").append("The Granada");
+				$(".excerptTitle").append("The <i>Granada</i>");
 			} else if ($(this).hasClass("Huron")) {
 				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Huron";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Huron</h1>" );
 				$(".nextBttn").addClass("Huron");
-				$(".excerptTitle").append("The J.H. Magruder");
+				$(".excerptTitle").append("The <i>J.H. Magruder</i>");
 			} else if ($(this).hasClass("Erie")) {
 				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Erie";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Erie</h1>" );
 				$(".nextBttn").addClass("Erie");
-				$(".excerptTitle").append("The Sophia Minch");
+				$(".excerptTitle").append("The <i>Sophia Minch</i>");
 			} else if ($(this).hasClass("Ontario")) {
 				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Ontario";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Ontario</h1>");
 				$(".nextBttn").addClass("Ontario");
-				$(".excerptTitle").append("The John R. Noyes");
+				$(".excerptTitle").append("The <i>John R. Noyes</i>");
 			}
 		
 		ajResp = $.get(ajSettings.url).success(function() {
@@ -87,10 +88,13 @@ $(".mapBttn").click(function(e) {
 			$('.scroll-pane').sbscroller('refresh');
 			$('.scroll-pane').sbscroller('reset');
 			$( ".summary" ).first().addClass("selected");
+			
 			loadExcerpt();
 		});
+		
 	}
 });
+
 
 function loadExcerpt () {
 	$(".reports").fadeOut(200, function() {
@@ -98,9 +102,11 @@ function loadExcerpt () {
 		$reportText = $(ajResp.responseText);
 		var ID = $(".selected").attr("summaryid");
 		$( ".reports" ).append($reportText.find(".report[reportid='"+ ID + "']"));
+		//Set image to center here .report img (left)
 		$(".reports").fadeIn(200);
 	});
 }
+
 
 $(".backBttn").click(function(e) {
 	if (currentScreen == 1) {
@@ -122,6 +128,7 @@ $(".backBttn").click(function(e) {
 	}
 });
 
+
 $(".nextBttn").click(function(e) {
 	if (currentScreen == 1) {
 		//Go to Excerpt Screens
@@ -137,6 +144,7 @@ $(".nextBttn").click(function(e) {
 		$("body").toggleClass("wholeMap");
 	}
 });
+
 
 $( ".scroll-pane" ).on( "slidestop", function( event, ui ) {
 	
@@ -162,14 +170,17 @@ $( ".scroll-pane" ).on( "slidestop", function( event, ui ) {
 	});
 });
 
+
 $( ".scroll-pane" ).on( "slidestart", function( event, ui ) {
 	timer = setInterval(checkPosition, 0);
-} );
+});
+
 
 $(".adaBttn").click(function(e) {
 	//ada
 });
 
+
 $( ".summary" ).bind( "click", function() {
-  console.log( "clicked report" );
 });
+

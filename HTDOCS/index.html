@@ -3,24 +3,29 @@
 <html>
 	<head>
 		<title>Life Aboard</title><meta charset="utf-8" />
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
-		<script src="JS/init.js"></script>
+		<script src="jquery.min.js"></script>
+		<script src="jquery-ui.min.js"></script>
+		<script src="init.js"></script>
 		<script type="text/javascript" src="JS/jquery.sbscroller.js"></script>
 		<link rel="stylesheet" href="CSS/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<link rel="stylesheet" href="CSS/jquery.sbscroller.css" />
+		
+		<script language="JavaScript" type="text/javascript"> 
+		function setDisplayState() { 
+		    window.nativeWindow.stage.displayState = 
+		        runtime.flash.display.StageDisplayState.FULL_SCREEN_INTERACTIVE;
+		} 
+		</script>
 	</head>
  	
-	<body class="wholeMap">
+	<body class="wholeMap" onload="setDisplayState();">
 		<div class="mapTitle"><h1>Lake Erie</h1></div>
 		<div class="excerptTitle">The Waldo</div>
-		
 		<div class="mapBttn Superior"></div>
 		<div class="mapBttn Michigan"></div>
 		<div class="mapBttn Huron"></div>
 		<div class="mapBttn Erie"></div>
 		<div class="mapBttn Ontario"></div>
-		
 		<div class="nextBttn"></div>
 		
 		<div class="dateContainer scroll-pane">
@@ -34,20 +39,17 @@
 			<div class="adaBttn"></div>
 		</div>
 		
-		
 		<script type="text/javascript">
 			$('.scroll-pane').sbscroller({
 							handleImage:'IMAGES/Scrollbar/handleImage.png',
 							handleTopImage:'IMAGES/Scrollbar/handleTopImage.png',
 							handleBottomImage:'IMAGES/Scrollbar/handleBottomImage.png',
-							handleGripImage:'IMAGES/Scrollbar/handleGripImage.png',
+							handleGripImage:'IMAGES/Scrollbar/handleGripImage3.png',
 							autohide:false,
 							stop: function( event, ui ) {}
 			});
 		</script>
 		
-		<script src="JS/selectors.js" type="text/javascript" charset="utf-8">
-
-		</script>
+		<script src="selectors.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>
