@@ -276,10 +276,6 @@ p {
 	margin-bottom:560px;
 }
 
-.summary:first {
-	margin-top:50px;
-}
-
 .disableClick {
 	pointer-events:none;
 }
