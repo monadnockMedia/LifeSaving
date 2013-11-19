@@ -31,6 +31,12 @@ html, body
 	color:white;
 	background-image:url('../IMAGES/Screen3_2.png');
 	overflow:hidden;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 body.wholeMap {
@@ -39,8 +45,9 @@ body.wholeMap {
 
 h2 {
 	font-size:22px;
-	margin-bottom:10px;
+	margin-bottom:5px;
 	margin-top:10px;
+	overflow:visible;
 }
 
 p {
@@ -256,6 +263,7 @@ p {
 	margin-bottom:75px;
 	pointer-events:all;
 	font-family: "oldPrint";
+	overflow:visible;
 }
 
 .summary.selected {
@@ -266,6 +274,10 @@ p {
 
 .summary:last-child {
 	margin-bottom:560px;
+}
+
+.summary:first {
+	margin-top:50px;
 }
 
 .disableClick {
