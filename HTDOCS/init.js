@@ -7,12 +7,4 @@ var ajResp;
 var timer;
 
 //Animation Framerate
-$.fx.interval = 13;
-
-/* Runs after page loaded */
-$(document).ready(init);
-
-function init(){
-
-}
-
+$.fx.interval = 35;

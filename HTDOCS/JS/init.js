@@ -15,6 +15,6 @@ $(document).ready(init);
 function init(){
 	
 	air.Mouse.hide();
+	alert("init");
 
 }
-

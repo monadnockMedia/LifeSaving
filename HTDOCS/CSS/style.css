@@ -12,8 +12,7 @@
 
 /*- Overall Page Formatting -*/
 * {
-	margin:0;
-	padding:0;
+
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
@@ -22,6 +21,8 @@
 
 html, body
 {
+	margin:0;
+	padding:0;
 	width:1280px;
 	height:1024px;
 	background-color:black;
