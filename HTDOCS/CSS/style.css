@@ -252,7 +252,7 @@ p {
 .summary {
 	z-index:10;
 	line-height:1em;
-	margin-top:25px;
+	margin-top:0px;
 	margin-bottom:75px;
 	pointer-events:all;
 	font-family: "oldPrint";

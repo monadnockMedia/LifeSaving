@@ -7,4 +7,4 @@ var ajResp;
 var timer;
 
 //Animation Framerate
-$.fx.interval = 35;
+$.fx.interval = 60;
