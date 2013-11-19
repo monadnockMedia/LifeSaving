@@ -88,7 +88,6 @@ $(".mapBttn").click(function(e) {
 			$('.scroll-pane').sbscroller('refresh');
 			$('.scroll-pane').sbscroller('reset');
 			$( ".summary" ).first().addClass("selected");
-			
 			loadExcerpt();
 		});
 		
@@ -102,7 +101,6 @@ function loadExcerpt () {
 		$reportText = $(ajResp.responseText);
 		var ID = $(".selected").attr("summaryid");
 		$( ".reports" ).append($reportText.find(".report[reportid='"+ ID + "']"));
-		//Set image to center here .report img (left)
 		$(".reports").fadeIn(200);
 	});
 }

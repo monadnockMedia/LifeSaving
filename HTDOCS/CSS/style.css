@@ -230,9 +230,11 @@ p {
 	left: 475px;
 	opacity:1;
 	color:black;
+	font-family: "oldPrint";
 }
 
 .report p {
+	font-family: "oldPrint";
 	font-size:1.35em;
 	padding:25px;
 }
@@ -250,12 +252,17 @@ p {
 	margin-top:25px;
 	margin-bottom:75px;
 	pointer-events:all;
+	font-family: "oldPrint";
 }
 
 .summary.selected {
 	text-shadow:0px 0px 7px #636e5a;
 	color:#FFFAB5;
 	pointer-events:all;
+}
+
+.summary:last-child {
+	margin-bottom:560px;
 }
 
 .disableClick {
