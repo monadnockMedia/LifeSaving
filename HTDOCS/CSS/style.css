@@ -17,6 +17,7 @@
 	-moz-box-sizing:border-box;
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
+	overflow:hidden;
 }
 
 html, body
@@ -28,6 +29,7 @@ html, body
 	font-size:16pt;
 	color:white;
 	background-image:url('../IMAGES/Screen3_2.png');
+	overflow:hidden;
 }
 
 body.wholeMap {

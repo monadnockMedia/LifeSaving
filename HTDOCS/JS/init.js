@@ -13,6 +13,8 @@ $.fx.interval = 13;
 $(document).ready(init);
 
 function init(){
+	
+	air.Mouse.hide();
 
 }
 
