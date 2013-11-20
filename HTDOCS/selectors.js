@@ -148,11 +148,11 @@ $( ".scroll-pane" ).on( "slidestop", function( event, ui ) {
 	
 	console.log(selectedMiddle);
 	//Calculate distance between middle of selection and middle of ribbon
-	if (selectedMiddle > 315) {
-		adjustDistance = selectedMiddle - 315;
+	if (selectedMiddle > 335) {
+		adjustDistance = selectedMiddle - 335;
 		adjustDistanceString = "-=" + adjustDistance.toString();
-	} else if (selectedMiddle < 315) {
-		adjustDistance = 315 - selectedMiddle;
+	} else if (selectedMiddle < 335) {
+		adjustDistance = 335 - selectedMiddle;
 		adjustDistanceString = "+=" + adjustDistance.toString();
 	}
 	
