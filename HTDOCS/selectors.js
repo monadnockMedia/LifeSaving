@@ -44,6 +44,7 @@ $(".mapBttn").click(function(e) {
 		$(".mapTitle").fadeIn(400).animate({left: "+=1280", opacity:1}, 500, function() {});
 		$(".mapBttn").fadeOut(500);
 		$(".nextBttn").animate({opacity:1}, 500, function() {});
+		$(".backBttn").animate({opacity:1}, 500, function() {});
 		$(".excerptTitle").empty();
 		
 		currentScreen = 1;
@@ -112,12 +113,14 @@ $(".backBttn").click(function(e) {
 		$(".mapBttn").fadeIn(500);
 		$(".nextBttn").animate({opacity:0}, 500, function() {});
 		$(".report").animate({opacity:0}, 0, function() {});
+		$(".backBttn").animate({opacity:0}, 500, function() {});
 		currentScreen = 0;
 	} else if (currentScreen == 2) {
 		$(".dateContainer").animate({left: "-=460", opacity:0}, 0, function() {});
 		$(".dates").animate({opacity:0}, 100, function() {});
 		$(".excerptTitle").animate({opacity:0}, 0, function() {});
 		$(".report").animate({opacity:0}, 0, function() {});
+		$(".backBttn").animate({opacity:0}, 100, function() {});
 		$(".mapBttn").fadeIn(0);
 		$( ".dates" ).empty();
 		$("body").toggleClass("wholeMap");
