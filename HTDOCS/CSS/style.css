@@ -45,8 +45,8 @@ body.wholeMap {
 
 h2 {
 	font-size:22px;
-	margin-bottom:5px;
-	margin-top:10px;
+	margin-bottom:0px;
+	margin-top:0px;
 	overflow:visible;
 }
 
@@ -246,7 +246,9 @@ p {
 .report p {
 	font-family: "oldPrint";
 	font-size:1.35em;
-	padding:25px;
+	padding-bottom:25px;
+	padding-left:25px;
+	padding-right:25px;
 }
 
 .report img {
@@ -260,10 +262,14 @@ p {
 	z-index:10;
 	line-height:1em;
 	margin-top:0px;
-	margin-bottom:75px;
+	margin-bottom:75px; /* 75 */
 	pointer-events:all;
 	font-family: "oldPrint";
 	overflow:visible;
+}
+
+.summary p {
+	margin-top:5px;
 }
 
 .summary.selected {
