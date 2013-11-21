@@ -263,7 +263,7 @@ p {
 	z-index:10;
 	line-height:1em;
 	margin-top:0px;
-	margin-bottom:75px; /* 75 */
+	margin-bottom:95px; /* 75 */
 	pointer-events:all;
 	font-family: "oldPrint";
 	overflow:visible;
@@ -284,7 +284,7 @@ p {
 }
 
 .summary:first-child {
-	margin-top:15px;
+	margin-top:20px;
 }
 
 .disableClick {
