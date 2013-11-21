@@ -283,6 +283,10 @@ p {
 	margin-bottom:560px;
 }
 
+.summary:first-child {
+	margin-top:15px;
+}
+
 .disableClick {
 	pointer-events:none;
 }

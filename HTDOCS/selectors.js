@@ -22,7 +22,7 @@ function checkPosition() { //gets called every update when slider is moving
 		$(".selected + .summary").addClass("selected");
 		$(".selected").first().removeClass("selected");
 		loadExcerpt();
-	} else if (selectedMiddle > 480) {
+	} else if (selectedMiddle > 400) {
 		$(".selected").prev().addClass("selected");
 		$(".selected").last().removeClass("selected");
 		$(".selected").animate({opacity:1}, 150, function() {});
@@ -152,13 +152,12 @@ $(".nextBttn").click(function(e) {
 
 $( ".scroll-pane" ).on( "slidestop", function( event, ui ) {
 	
-	console.log(selectedMiddle);
 	//Calculate distance between middle of selection and middle of ribbon
-	if (selectedMiddle > 335) {
-		adjustDistance = selectedMiddle - 335;
+	if (selectedMiddle > 310) {
+		adjustDistance = selectedMiddle - 310;
 		adjustDistanceString = "-=" + adjustDistance.toString();
-	} else if (selectedMiddle < 335) {
-		adjustDistance = 335 - selectedMiddle;
+	} else if (selectedMiddle < 310) {
+		adjustDistance = 310 - selectedMiddle;
 		adjustDistanceString = "+=" + adjustDistance.toString();
 	}
 	
