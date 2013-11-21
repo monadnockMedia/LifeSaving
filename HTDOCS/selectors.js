@@ -117,6 +117,7 @@ $(".backBttn").click(function(e) {
 		currentScreen = 0;
 	} else if (currentScreen == 2) {
 		$(".dateContainer").animate({left: "-=460", opacity:0}, 0, function() {});
+		$(".gradientBG").animate({left: "-=460", opacity:0}, 0, function() {});
 		$(".dates").animate({opacity:0}, 100, function() {});
 		$(".excerptTitle").animate({opacity:0}, 0, function() {});
 		$(".report").animate({opacity:0}, 0, function() {});
@@ -135,8 +136,10 @@ $(".nextBttn").click(function(e) {
 		//Go to Excerpt Screens
 		$(".mapTitle").fadeIn( 400 ).animate({left: "-=1280", opacity:1}, 500, function() {
 			$(".dateContainer").animate({left: "+=460", opacity:1}, 500, function() {});
+			$(".gradientBG").animate({left: "+=460", opacity:1}, 500, function() {});
 			$(".dates").animate({opacity:1}, 500, function() {});
 			$(".report").animate({opacity:1}, 500, function() {});
+			
 			$(".excerptTitle").animate({opacity:1}, 500, function() {});
 		});
 		currentScreen = 2;
