@@ -5,8 +5,25 @@
 
 /*- Font Faces -*/
 @font-face {
-  font-family: "oldPrint";
-  src: url("../FONTS/Hoefler Text.ttc") format("truetype");
+    font-family: 'times';
+    src: url('../FONTS/times-webfont.eot');
+    src: url('../FONTS/times-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../FONTS/times-webfont.woff') format('woff'),
+         url('../FONTS/times-webfont.ttf') format('truetype'),
+         url('../FONTS/times-webfont.svg#timesregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'typewriter';
+    src: url('../FONTS/travelingtypewriter-webfont.eot');
+    src: url('../FONTS/travelingtypewriter-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../FONTS/travelingtypewriter-webfont.woff') format('woff'),
+         url('../FONTS/travelingtypewriter-webfont.ttf') format('truetype'),
+         url('../FONTS/travelingtypewriter-webfont.svg#traveling__typewriterregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
 
@@ -48,6 +65,7 @@ h2 {
 	margin-bottom:0px;
 	margin-top:0px;
 	overflow:visible;
+	font-family: 'times';
 }
 
 p {
@@ -76,7 +94,7 @@ p {
 
 .excerptTitle {
 	position:absolute;
-	top: 35px;
+	top: 10px;
 	left:0;
 	width:1280px;
 	height:100px;
@@ -85,7 +103,8 @@ p {
 	color:#dbd4b6;
 	text-shadow:1px 1px 10px black, -1px -1px 40px #636e5a, -1px -1px 60px #cdd6c5;
 	opacity:0;
-	font-family:"oldPrint";
+	font-family: 'times';
+	overflow:visible;
 }
 
 .mapTitle h1 {
@@ -241,15 +260,14 @@ p {
 	left: 475px;
 	opacity:1;
 	color:black;
-	font-family: "oldPrint";
 }
 
 .report p {
-	font-family: "oldPrint";
-	font-size:1.35em;
-	padding-bottom:25px;
-	padding-left:25px;
-	padding-right:25px;
+	font-family: "typewriter";
+	font-size:1.2em;
+	padding-bottom:0px;
+	padding-left:35px;
+	padding-right:35px;
 }
 
 .report img {
@@ -260,17 +278,18 @@ p {
 }
 
 .summary {
+	font-family: "times";
 	z-index:10;
 	line-height:1em;
 	margin-top:0px;
 	margin-bottom:95px; /* 75 */
 	pointer-events:all;
-	font-family: "oldPrint";
 	overflow:visible;
 }
 
 .summary p {
 	margin-top:5px;
+	font-family: "times";
 }
 
 .summary.selected {
