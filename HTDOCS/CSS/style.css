@@ -240,7 +240,7 @@ p {
 	opacity:0;
 	padding:0px;
 	background-repeat:no-repeat;
-	background-image:url('../IMAGES/Ribbon6.png');
+	background-image:url('../IMAGES/Ribbon7.png');
 	overflow:visible;
 	pointer-events:none;
 }
@@ -282,7 +282,7 @@ p {
 	z-index:10;
 	line-height:1em;
 	margin-top:0px;
-	margin-bottom:95px; /* 75 */
+	margin-bottom:125px; /* 75 */
 	pointer-events:all;
 	overflow:visible;
 }
@@ -303,7 +303,7 @@ p {
 }
 
 .summary:first-child {
-	margin-top:20px;
+	margin-top:30px;
 }
 
 .disableClick {
@@ -314,7 +314,7 @@ p {
 	width:440px;
 	height:463px;
 	position:absolute;
-	top:412px;
+	top:420px;
 	left:-454px;
 	opacity:0;
 	

@@ -151,6 +151,7 @@ $(".nextBttn").click(function(e) {
 
 
 $( ".scroll-pane" ).on( "slidestop", function( event, ui ) {
+	checkPosition();
 	
 	//Calculate distance between middle of selection and middle of ribbon
 	if (selectedMiddle > 310) {
@@ -172,7 +173,6 @@ $( ".scroll-pane" ).on( "slidestop", function( event, ui ) {
 	    }
 	});
 });
-
 
 $( ".scroll-pane" ).on( "slidestart", function( event, ui ) {
 	timer = setInterval(checkPosition, 0);
