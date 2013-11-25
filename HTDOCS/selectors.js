@@ -16,13 +16,13 @@ function checkPosition() { //gets called every update when slider is moving
 	selectedHeight = $(".selected").innerHeight();
 	selectedCenter = (selectedHeight/2);
 	selectedMiddle = (selectedOffset.top + selectedCenter);
-	
-	if (selectedMiddle < 200) {
+	//air.Introspector.Console.log(selectedMiddle);
+	if (selectedMiddle < 185) {
 		$(".selected").animate({opacity:0.01}, 150, function() {});
 		$(".selected + .summary").addClass("selected");
 		$(".selected").first().removeClass("selected");
 		loadExcerpt();
-	} else if (selectedMiddle > 400) {
+	} else if (selectedMiddle > 420) {
 		$(".selected").prev().addClass("selected");
 		$(".selected").last().removeClass("selected");
 		$(".selected").animate({opacity:1}, 150, function() {});

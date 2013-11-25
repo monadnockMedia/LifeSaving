@@ -281,7 +281,7 @@ p {
 	font-family: "times";
 	z-index:10;
 	line-height:1em;
-	margin-top:0px;
+	margin-top:25px;
 	margin-bottom:125px; /* 75 */
 	pointer-events:all;
 	overflow:visible;
