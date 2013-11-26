@@ -262,6 +262,11 @@ p {
 	color:black;
 }
 
+.reports h2 {
+	font-family:"times";
+	
+}
+
 .report p {
 	font-family: "typewriter";
 	font-size:1.2em;
@@ -290,12 +295,14 @@ p {
 .summary p {
 	margin-top:5px;
 	font-family: "times";
+	overflow:visible;
 }
 
 .summary.selected {
 	text-shadow:0px 0px 7px #636e5a;
 	color:#FFFAB5;
 	pointer-events:all;
+	overflow:visible;
 }
 
 .summary:last-child {

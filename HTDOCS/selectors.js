@@ -9,6 +9,7 @@ var adjustDistance;
 var adjustDistanceString;
 var $reportText;
 var $summaryText;
+var header = "<h2>Excerpt from U.S. Life-Saving Station Annual Report</h2>";
 
 
 function checkPosition() { //gets called every update when slider is moving
@@ -101,6 +102,7 @@ function loadExcerpt () {
 		$(".reports").empty();
 		$reportText = $(ajResp.responseText);
 		var ID = $(".selected").attr("summaryid");
+		$( ".reports" ).append(header);
 		$( ".reports" ).append($reportText.find(".report[reportid='"+ ID + "']"));
 		$(".reports").fadeIn(200);
 	});
@@ -112,7 +114,7 @@ $(".backBttn").click(function(e) {
 		$(".mapTitle").fadeIn( 400 ).animate({left: "-=1280", opacity:1}, 500, function() {});
 		$(".mapBttn").fadeIn(500);
 		$(".nextBttn").animate({opacity:0}, 500, function() {});
-		$(".report").animate({opacity:0}, 0, function() {});
+		$(".reports").animate({opacity:0}, 0, function() {});
 		$(".backBttn").animate({opacity:0}, 500, function() {});
 		currentScreen = 0;
 	} else if (currentScreen == 2) {
@@ -120,7 +122,7 @@ $(".backBttn").click(function(e) {
 		$(".gradientBG").animate({left: "-=460", opacity:0}, 0, function() {});
 		$(".dates").animate({opacity:0}, 100, function() {});
 		$(".excerptTitle").animate({opacity:0}, 0, function() {});
-		$(".report").animate({opacity:0}, 0, function() {});
+		$(".reports").animate({opacity:0}, 0, function() {});
 		$(".backBttn").animate({opacity:0}, 100, function() {});
 		$(".mapBttn").fadeIn(0);
 		$( ".dates" ).empty();
@@ -138,7 +140,7 @@ $(".nextBttn").click(function(e) {
 			$(".dateContainer").animate({left: "+=460", opacity:1}, 500, function() {});
 			$(".gradientBG").animate({left: "+=460", opacity:1}, 500, function() {});
 			$(".dates").animate({opacity:1}, 500, function() {});
-			$(".report").animate({opacity:1}, 500, function() {});
+			$(".reports").animate({opacity:1}, 500, function() {});
 			
 			$(".excerptTitle").animate({opacity:1}, 500, function() {});
 		});
