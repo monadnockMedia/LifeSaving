@@ -295,11 +295,15 @@ p {
 	font-family:sans-serif;
 }
 
-.report img {
+.reports img {
 	display: block;
 	position:relative;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.reports.adaEnabled img {
+	background-color:white;
 }
 
 .summary {
