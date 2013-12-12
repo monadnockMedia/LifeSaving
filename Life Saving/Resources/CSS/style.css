@@ -33,6 +33,7 @@
 	-webkit-box-sizing:border-box;
 	box-sizing:border-box;
 	overflow:hidden;
+	cursor: url('../IMAGES/cursor.png'), auto;
 }
 
 html, body
