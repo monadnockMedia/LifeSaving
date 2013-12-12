@@ -1,5 +1,5 @@
 
-
+var adaEnabled = false;
 var currentScreen = 0;
 var selectedOffset;
 var selectedCenter;
@@ -95,6 +95,11 @@ $(".mapBttn").click(function(e) {
 			$('.scroll-pane').sbscroller('refresh');
 			$('.scroll-pane').sbscroller('reset');
 			$( ".summary" ).first().addClass("selected");
+			
+			if (adaEnabled) {
+				$(".summary").addClass("adaEnabled");
+			}
+			
 			loadExcerpt();
 		});
 		
@@ -187,7 +192,18 @@ $( ".scroll-pane" ).on( "slidestart", function( event, ui ) {
 
 
 $(".adaBttn").click(function(e) {
-	//ada
+	
+	if (adaEnabled) {
+		adaEnabled = false;
+		$(".dates").removeClass("adaEnabled");
+		$(".reports").removeClass("adaEnabled");
+		$(".summary").removeClass("adaEnabled");
+	} else {
+		adaEnabled = true;
+		$(".dates").addClass("adaEnabled");
+		$(".reports").addClass("adaEnabled");
+		$(".summary").addClass("adaEnabled");
+	}
 });
 
 

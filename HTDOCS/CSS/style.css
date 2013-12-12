@@ -242,6 +242,7 @@ p {
 	background-image:url('../IMAGES/Ribbon7.png');
 	overflow:visible;
 	pointer-events:none;
+	z-index:15;
 }
 
 .dates {
@@ -249,6 +250,11 @@ p {
 	margin-left:5px;
 	pointer-events:none;
 	padding-right:20px;
+}
+
+.dates.adaEnabled {
+	color:white;
+	background-color:black;
 }
 
 .reports {
@@ -261,17 +267,31 @@ p {
 	color:black;
 }
 
+.reports.adaEnabled {
+	color:white;
+	background-color:black;
+
+}
+
 .reports h2 {
 	font-family:"times";
 	margin-left:35px;
 }
 
-.report p {
+.reports.adaEnabled h2 {
+	font-family:sans-serif;
+}
+
+.reports p {
 	font-family: "typewriter";
 	font-size:1.2em;
 	padding-bottom:0px;
 	padding-left:35px;
 	padding-right:35px;
+}
+
+.reports.adaEnabled p {
+	font-family:sans-serif;
 }
 
 .report img {
@@ -282,8 +302,9 @@ p {
 }
 
 .summary {
+	text-shadow:3px 3px 4px black;
 	font-family: "times";
-	z-index:10;
+	z-index:1;
 	line-height:1em;
 	margin-top:25px;
 	margin-bottom:125px; /* 75 */
@@ -293,12 +314,22 @@ p {
 
 .summary p {
 	margin-top:5px;
-	font-family: "times";
 	overflow:visible;
+	z-index:1;
+}
+
+.summary.adaEnabled {
+	font-family:sans-serif;
+	color:white;
+}
+
+.summary.selected.adaEnabled {
+	font-family:sans-serif;
+	color:yellow;
 }
 
 .summary.selected {
-	text-shadow:0px 0px 7px #636e5a;
+	text-shadow:0px 0px 7px #636e5a, 3px 3px 4px black;
 	color:#FFFAB5;
 	pointer-events:all;
 	overflow:visible;
