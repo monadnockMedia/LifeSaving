@@ -279,6 +279,10 @@ p {
 	margin-left:35px;
 }
 
+.reports b {
+	font-size:0.8em;
+}
+
 .reports.adaEnabled h2 {
 	font-family:sans-serif;
 }

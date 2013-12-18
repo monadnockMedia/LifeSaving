@@ -53,35 +53,35 @@ $(".mapBttn").click(function(e) {
 		
 			if ($(this).hasClass("Superior")) {
 				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Superior";
-				header = "<h2>Excerpt from Annual Report of the U.S. Life-Saving Service</h2>";
+				header = "<h2><u>Excerpt from Annual Report of the U.S. Life-Saving Service<u/></h2>";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Superior</h1>" );
 				$(".nextBttn").addClass("Superior");
 				$(".excerptTitle").append("The <i>Waldo</i>");
 			} else if ($(this).hasClass("Michigan")) {
 				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Michigan";
-				header = "<h2>Excerpt from Annual Report of the U.S. Life-Saving Service</h2>";
+				header = "<h2><u>Excerpt from Annual Report of the U.S. Life-Saving Service<u/></h2>";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Michigan</h1>" );
 				$(".nextBttn").addClass("Michigan");
 				$(".excerptTitle").append("The <i>Granada</i>");
 			} else if ($(this).hasClass("Huron")) {
 				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Huron";
-				header = "<h2>Excerpt from the Report of District Superintendent Joseph Sawyer</h2>";
+				header = "<h2><u>Excerpt from the Report of District Superintendent Joseph Sawyer<u/></h2>";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Huron</h1>" );
 				$(".nextBttn").addClass("Huron");
 				$(".excerptTitle").append("The <i>J.H. Magruder</i>");
 			} else if ($(this).hasClass("Erie")) {
 				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Erie";
-				header = "<h2>Excerpt from Annual Report of the U.S. Life-Saving Service</h2>";
+				header = "<h2><u>Excerpt from Annual Report of the U.S. Life-Saving Service<u/></h2>";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Erie</h1>" );
 				$(".nextBttn").addClass("Erie");
 				$(".excerptTitle").append("The <i>Sophia Minch</i>");
 			} else if ($(this).hasClass("Ontario")) {
 				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Ontario";
-				header = "<h2>Excerpt from letter by the Secretary of the Treasury</h2>";
+				header = "<h2><u>Excerpt from letter by the Secretary of the Treasury<u/></h2>";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Ontario</h1>");
 				$(".nextBttn").addClass("Ontario");
