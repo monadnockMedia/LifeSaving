@@ -81,7 +81,7 @@ $(".mapBttn").click(function(e) {
 				$(".excerptTitle").append("The <i>Sophia Minch</i>");
 			} else if ($(this).hasClass("Ontario")) {
 				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Ontario";
-				header = "<h2><u>Excerpt from letter by the Secretary of the Treasury<u/></h2>";
+				header = "<h2><u>Excerpt from letter by the Secretary of the Treasury to Keeper Gray and crew<u/></h2>";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Ontario</h1>");
 				$(".nextBttn").addClass("Ontario");
