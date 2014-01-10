@@ -1,7 +1,7 @@
 
 var ajSettings = $.ajaxSettings;
 
-ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Superior";
+ajSettings.url = "http://monadnock.or.gs:8080/lifeSaving/LAKE/Superior";
 
 var ajResp;
 var timer;

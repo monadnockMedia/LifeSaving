@@ -10,9 +10,54 @@ var adjustDistanceString;
 var $reportText;
 var $summaryText;
 var header = "<h2>Excerpt from U.S. Life-Saving Station Annual Report</h2>";
+var idleTimer;
+
+$(document.body).click(function(e) {
+	userStarted();
+	
+})
+
+function restart() {
+	document.location.href='';
+}
+
+function promptIdleUser() {   
+    clearInterval(idleTimer);
+  	idleTimer = setInterval(restart, 10000);
+
+	$( "#dialog" ).dialog({
+		height:250,
+		width: 500,
+		modal: true,
+		resizable: false,
+		show: {
+			effect: "blind", duration: 250
+		},
+		hide: {
+			effect: "blind", duration: 250
+		},
+		buttons: {
+		  	"Yes": function()
+			{
+		    	$( this ).dialog( "close" );
+				userStarted();
+		  	}
+		}
+	}); // Shows the idle alert box.
+}
+
+function userStarted() {
+	clearInterval(idleTimer);
+	console.log("Clear Interval");
+	idleTimer = setInterval(promptIdleUser, 120000); // 30000
+}
+
+
 
 
 function checkPosition() { //gets called every update when slider is moving
+	userStarted();
+	
 	selectedOffset = $(".selected").offset();
 	selectedHeight = $(".selected").innerHeight();
 	selectedCenter = (selectedHeight/2);
@@ -52,35 +97,35 @@ $(".mapBttn").click(function(e) {
 		clearMap();
 		
 			if ($(this).hasClass("Superior")) {
-				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Superior";
+				ajSettings.url = "http://monadnock.or.gs:8080/lifeSaving/LAKE/Superior";
 				header = "<h2><u>Excerpt from Annual Report of the U.S. Life-Saving Service<u/></h2>";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Superior</h1>" );
 				$(".nextBttn").addClass("Superior");
 				$(".excerptTitle").append("The <i>Waldo</i>");
 			} else if ($(this).hasClass("Michigan")) {
-				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Michigan";
+				ajSettings.url = "http://monadnock.or.gs:8080/lifeSaving/LAKE/Michigan";
 				header = "<h2><u>Excerpt from Annual Report of the U.S. Life-Saving Service<u/></h2>";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Michigan</h1>" );
 				$(".nextBttn").addClass("Michigan");
 				$(".excerptTitle").append("The <i>Granada</i>");
 			} else if ($(this).hasClass("Huron")) {
-				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Huron";
+				ajSettings.url = "http://monadnock.or.gs:8080/lifeSaving/LAKE/Huron";
 				header = "<h2><u>Excerpt from the Report of District Superintendent Joseph Sawyer<u/></h2>";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Huron</h1>" );
 				$(".nextBttn").addClass("Huron");
 				$(".excerptTitle").append("The <i>J.H. Magruder</i>");
 			} else if ($(this).hasClass("Erie")) {
-				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Erie";
+				ajSettings.url = "http://monadnock.or.gs:8080/lifeSaving/LAKE/Erie";
 				header = "<h2><u>Excerpt from Annual Report of the U.S. Life-Saving Service<u/></h2>";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Erie</h1>" );
 				$(".nextBttn").addClass("Erie");
 				$(".excerptTitle").append("The <i>Sophia Minch</i>");
 			} else if ($(this).hasClass("Ontario")) {
-				ajSettings.url = "http://server.local:8080/lifeSaving/LAKE/Ontario";
+				ajSettings.url = "http://monadnock.or.gs:8080/lifeSaving/LAKE/Ontario";
 				header = "<h2><u>Excerpt from letter by the Secretary of the Treasury to Keeper Gray and crew<u/></h2>";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Ontario</h1>");
@@ -163,6 +208,7 @@ $(".nextBttn").click(function(e) {
 
 
 $( ".scroll-pane" ).on( "slidestop", function( event, ui ) {
+	
 	checkPosition();
 	
 	//Calculate distance between middle of selection and middle of ribbon

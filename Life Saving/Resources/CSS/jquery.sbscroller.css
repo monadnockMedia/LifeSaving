@@ -4,9 +4,9 @@
 .slider-vertical{overflow:visible;position:relative;height:100%;opacity:1;}
 .ui-slider-handle{background-color:transparent;width:75px;height:5px;margin:0 auto;display:block;position:absolute;z-index:20;}
 .ui-slider-handle img{border:none;z-index:20;}
-.scrollbar-top{position:absolute;top:0;z-index:20;}
-.scrollbar-bottom{position:absolute;bottom:0;z-index:20;}
-.scrollbar-grip{position:absolute;top:50%;z-index:20;opacity:1;pointer-events:auto;}
+.scrollbar-top{background:transparent;position:absolute;top:0;z-index:20;}
+.scrollbar-bottom{background:transparent;position:absolute;bottom:0;z-index:20;}
+.scrollbar-grip{background:transparent;position:absolute;top:50%;z-index:20;opacity:1;pointer-events:auto;}
 .scroll-container{overflow:hidden;}
 
 .ui-slider-handle:focus {

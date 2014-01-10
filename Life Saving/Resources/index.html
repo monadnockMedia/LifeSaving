@@ -8,18 +8,24 @@
 		<script src="AIRAliases.js"></script>
 		<script src="init.js"></script>
 		<script type="text/javascript" src="JS/jquery.sbscroller.js"></script>
+		<link rel="stylesheet" href="CSS/pepper-grinder/jquery-ui-1.10.3.custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<link rel="stylesheet" href="CSS/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<link rel="stylesheet" href="CSS/jquery.sbscroller.css" />
 	</head>
  	
 	<body class="wholeMap" onload="setDisplayState();">
+		
+		<div id="dialog" title="" style="display:none">
+		    </br></br>Would you like more time?
+		</div>
+		
 		<div class="mapTitle"><h1>Lake Erie</h1></div>
 		<div class="excerptTitle">The Waldo</div>
-		<div class="mapBttn Superior"></div>
-		<div class="mapBttn Michigan"></div>
-		<div class="mapBttn Huron"></div>
-		<div class="mapBttn Erie"></div>
-		<div class="mapBttn Ontario"></div>
+		<div class="mapBttn Superior" onclick="userStarted()"></div>
+		<div class="mapBttn Michigan" onclick="userStarted()"></div>
+		<div class="mapBttn Huron" onclick="userStarted()"></div>
+		<div class="mapBttn Erie" onclick="userStarted()"></div>
+		<div class="mapBttn Ontario" onclick="userStarted()"></div>
 		<div class="nextBttn"></div>
 		
 		<div class="dateContainer scroll-pane">
