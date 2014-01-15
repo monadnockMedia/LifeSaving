@@ -71,6 +71,31 @@ p {
 	margin-left:10px;
 }
 
+#attractLoopBG {
+	background-image:url('../IMAGES/AttractLoopBG_Text.jpg');
+	width:1280px;
+	height:1024px;
+	position:absolute;
+	z-index:5;
+}
+
+#attractBook {
+	position:absolute;
+	z-index:6;
+	background-image:url('../IMAGES/AttractLoopBook_Text.png');
+	width:1280px;
+	height:1024px;
+}
+
+#attractFilm {
+	position:absolute;
+	z-index:6;
+	background-image:url('../IMAGES/AttractLoopFilm_Text.png');
+	width:1280px;
+	height:1024px;
+	left:1280px;
+}
+
 
 
 .hidden
@@ -88,7 +113,6 @@ p {
 	background-repeat:no-repeat;
 	background-image:url('../IMAGES/Bookmark.png');
 	color:white;
-	
 }
 
 .excerptTitle {
@@ -99,10 +123,10 @@ p {
 	height:100px;
 	text-align:center;
 	font-size:72px;
-	color:#dbd4b6;
-	text-shadow:1px 1px 10px black, -1px -1px 40px #636e5a, -1px -1px 60px #cdd6c5;
-	opacity:0;
 	font-family: 'times';
+	color:#dbd4b6;
+	/*text-shadow:1px 1px 10px black, -1px -1px 40px #636e5a, -1px -1px 60px #cdd6c5;*/
+	opacity:0;
 	overflow:visible;
 }
 
@@ -239,10 +263,10 @@ p {
 	opacity:0;
 	padding:0px;
 	background-repeat:no-repeat;
-	background-image:url('../IMAGES/Ribbon7.png');
+	background-image:url('../IMAGES/Ribbon9.png');
 	overflow:visible;
 	pointer-events:none;
-	z-index:15;
+	z-index:3;
 }
 
 .dates {
@@ -356,11 +380,11 @@ p {
 }
 
 .gradientBG {
-	width:440px;
+	width:410px;
 	height:463px;
 	position:absolute;
 	top:420px;
-	left:-454px;
+	left:-444px;
 	opacity:0;
 	
 	background: -moz-linear-gradient(top, rgba(127,127,127,0.8) 0%, rgba(0,0,0,0) 100%); /* FF3.6+ */
@@ -370,5 +394,22 @@ p {
 	background: -ms-linear-gradient(top, rgba(127,127,127,0.8) 0%,rgba(0,0,0,0) 100%); /* IE10+ */
 	background: linear-gradient(to bottom, rgba(127,127,127,0.8) 0%,rgba(0,0,0,0) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc7f7f7f', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+
+.summaryHeader {
+	width:410px;
+	height:60px;
+	position:absolute;
+	top:170px;
+	left:-434px;
+	opacity:0;
+	font-size:32px;
+	font-family: 'times';
+	color:#dbd4b6;
+	/*text-shadow:1px 1px 10px black, -1px -1px 40px #636e5a, -1px -1px 60px #cdd6c5, 1px 1px 5px black, -1px -1px 40px #636e5a, -1px -1px 30px #cdd6c5;*/
+	opacity:0;
+	overflow:visible;
+	background-color:black;
+	z-index:4;
 }
 
