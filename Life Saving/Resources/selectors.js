@@ -167,12 +167,13 @@ $(".mapBttn").click(function(e) {
 			$( ".dates" ).append($summaryText.find(".summary"));
 			$('.scroll-pane').sbscroller('refresh');
 			$('.scroll-pane').sbscroller('reset');
+			console.log("SBSCroller Refresh&Reset");
 			$( ".summary" ).first().addClass("selected");
 			
 			if (adaEnabled) {
 				$(".summary").addClass("adaEnabled");
 			}
-			
+			fakeClick();
 			loadExcerpt();
 		});
 	}
@@ -222,11 +223,11 @@ $( ".scroll-pane" ).on( "slidestop", function( event, ui ) {
 	checkPosition();
 	
 	//Calculate distance between middle of selection and middle of ribbon
-	if (selectedMiddle > 310) {
-		adjustDistance = selectedMiddle - 310;
+	if (selectedMiddle > 320) {
+		adjustDistance = selectedMiddle - 320;
 		adjustDistanceString = "-=" + adjustDistance.toString();
-	} else if (selectedMiddle < 310) {
-		adjustDistance = 310 - selectedMiddle;
+	} else if (selectedMiddle < 320) {
+		adjustDistance = 320 - selectedMiddle;
 		adjustDistanceString = "+=" + adjustDistance.toString();
 	}
 	
@@ -238,9 +239,35 @@ $( ".scroll-pane" ).on( "slidestop", function( event, ui ) {
 	    complete: function(){
 	      $('.scroll-pane').sbscroller('refresh');
 		  clearInterval(timer);
+		  console.log("let go of slide");
 	    }
 	});
 });
+
+function fakeClick() {
+	checkPosition();
+	
+	//Calculate distance between middle of selection and middle of ribbon 310
+	if (selectedMiddle > 320) {
+		adjustDistance = selectedMiddle - 320;
+		adjustDistanceString = "-=" + adjustDistance.toString();
+	} else if (selectedMiddle < 320) {
+		adjustDistance = 320 - selectedMiddle;
+		adjustDistanceString = "+=" + adjustDistance.toString();
+	}
+	
+	//Move report to center
+	$(".scroll-content").animate({
+	    top: adjustDistanceString
+	  }, {
+	    duration: 200,
+	    complete: function(){
+	      $('.scroll-pane').sbscroller('refresh');
+		  clearInterval(timer);
+		  console.log("ONE TIME PRE-CLICK");
+	    }
+	});
+}
 
 $( ".scroll-pane" ).on( "slidestart", function( event, ui ) {
 	timer = setInterval(checkPosition, 0);
