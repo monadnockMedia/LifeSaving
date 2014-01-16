@@ -155,7 +155,7 @@ $(".mapBttn").click(function(e) {
 				$(".excerptTitle").append("The <i>Sophia Minch</i>, 1884");
 			} else if ($(this).hasClass("Ontario")) {
 				ajSettings.url = "http://monadnock.or.gs:8080/lifeSaving/LAKE/Ontario";
-				header = "<h2><u>Excerpt from the letter commending Keeper Gray and crew<u/></h2>";
+				header = "<h2><u>Excerpt from Commendation Letter to Keeper Gray and Crew<u/></h2>";
 				$( ".mapTitle" ).empty();
 				$( ".mapTitle" ).append( "<h1>Lake Ontario</h1>");
 				$(".excerptTitle").append("The <i>John R. Noyes</i>, 1902");
