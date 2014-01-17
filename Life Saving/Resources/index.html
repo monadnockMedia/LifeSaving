@@ -7,21 +7,30 @@
 		<script src="jquery-ui.min.js"></script>
 		<script src="AIRAliases.js"></script>
 		<script src="init.js"></script>
+		<script src="shadowbox.js"></script>
 		<script type="text/javascript" src="JS/jquery.sbscroller.js"></script>
 		<link rel="stylesheet" href="CSS/pepper-grinder/jquery-ui-1.10.3.custom.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<link rel="stylesheet" href="CSS/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
 		<link rel="stylesheet" href="CSS/jquery.sbscroller.css" />
+		<link rel="stylesheet" href="shadowbox.css" />
 	</head>
  	
 	<body class="wholeMap" onload="setDisplayState();">
+		
+		<script type="text/javascript">
+		Shadowbox.init({ 
+		    language: 'en', 
+		    players:  ['html', 'iframe'] 
+		});
+		</script>
 		
 		<div id="attractLoopBG">
 			<div id="attractBook">
 
 			</div>
-			<div id="attractFilm">
+			<a href="LifeSaving.mp4" rel="shadowbox;height=480;width=640" title="Life Saving"><div id="attractFilm">
 
-			</div>
+			</div></a>
 		</div>
 		
 		<div id="dialog" title="" style="display:none">

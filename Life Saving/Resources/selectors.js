@@ -1,6 +1,6 @@
 
 var adaEnabled = false;
-var currentScreen = 1;
+var currentScreen = 0;
 var selectedOffset;
 var selectedCenter;
 var selectedHeight;
@@ -25,7 +25,7 @@ attractLoop();
 function attractLoop(){
 		
 	$("#attractBook").animate({left: "-=1280px"}, 15000, "linear", function() {
-		$("#attractBook").css({left: 1280});
+		$("#attractBook").css({left: 1280, opacity:1});
 		
 		$("#attractBook").animate({left: "-=1280px"}, 15000, "linear", function() {
 			attractLoop();
@@ -34,18 +34,31 @@ function attractLoop(){
 	});
 	
 	$("#attractFilm").animate({left: "-=2560px"}, 30000, "linear", function() {
-		$("#attractFilm").css({left: 1280});
+		$("#attractFilm").css({left: 1280, opacity:1});
 	});
 }
 
+
+
 $("#attractBook").click(function(e) {
-	$("#attractBook").animate({opacity:0}, 250, function() {});
-	$("#attractFilm").animate({opacity:0}, 250, function() {});
+	console.log("Clicked #attractBook");
+	$("#attractBook").css({opacity: 0});
+	$("#attractBook").css({opacity: 0});
 	$("#attractLoopBG").animate({opacity:0}, 250, function() {
 		$("#attractLoopBG").css({left: 8000});
 	});
 	currentScreen = 1;
 });
+
+/*$("#attractFilm").click(function(e) {
+	console.log("Clicked #attractFilm");
+	$("#attractBook").css({opacity: 0});
+	$("#attractBook").css({opacity: 0});
+	$("#attractLoopBG").animate({opacity:0}, 250, function() {
+		$("#attractLoopBG").css({left: 8000});
+	});
+	currentScreen = 1;
+});*/
 
 
 function promptIdleUser() {   
@@ -107,10 +120,11 @@ function checkPosition() { //gets called every update when slider is moving
 
 
 $(".mapBttn").click(function(e) {
+	
 	if (currentScreen == 1) {
 
 		$(".mapBttn").fadeOut(500);
-		$(".backBttn").animate({opacity:1}, 500, function() {});
+		$(".f").animate({opacity:1}, 500, function() {});
 		$(".excerptTitle").empty();
 		$(".excerptTitle").animate({opacity:1}, 250, function() {});
 		
@@ -193,11 +207,20 @@ function loadExcerpt () {
 
 
 $(".backBttn").click(function(e) {
-	if (currentScreen == 2) {
+	console.log("CurrentScreen: " + currentScreen);
+	if (currentScreen == 1) {
+		$("#attractBook").css({opacity: 1});
+		$("#attractFilm").css({opacity: 1});
+		$("#attractLoopBG").css({left: 0});
+		$("#attractLoopBG").animate({opacity:1}, 250, function() {
+			
+		});
+		currentScreen = 0;
+	} else if (currentScreen == 2) {
 		$(".mapTitle").fadeIn( 400 ).animate({left: "-=1280", opacity:1}, 500, function() {});
 		$(".mapBttn").fadeIn(500);
 		$(".reports").animate({opacity:0}, 0, function() {});
-		$(".backBttn").animate({opacity:0}, 500, function() {});
+		//$(".backBttn").animate({opacity:0}, 500, function() {});
 		currentScreen = 1;
 	} else if (currentScreen == 3) {
 		$(".dateContainer").animate({left: "-=460", opacity:0}, 0, function() {});
@@ -206,7 +229,7 @@ $(".backBttn").click(function(e) {
 		$(".dates").animate({opacity:0}, 100, function() {});
 		$(".excerptTitle").animate({opacity:0}, 0, function() {});
 		$(".reports").animate({opacity:0}, 0, function() {});
-		$(".backBttn").animate({opacity:0}, 100, function() {});
+		//$(".backBttn").animate({opacity:0}, 100, function() {});
 		$(".mapBttn").fadeIn(0);
 		$( ".dates" ).empty();
 		$("body").toggleClass("wholeMap");

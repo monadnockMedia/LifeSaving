@@ -154,7 +154,8 @@ p {
 	background-repeat:no-repeat;
 	background-image:url('../IMAGES/BackArrow.png');
 	pointer-events:all;
-	opacity:0;
+	opacity:1;
+	z-index:7;
 }
 
 .backBttn:active {
