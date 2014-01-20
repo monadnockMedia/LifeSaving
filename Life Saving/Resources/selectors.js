@@ -41,6 +41,7 @@ function attractLoop(){
 
 
 $("#attractBook").click(function(e) {
+	clickSnd.play();
 	console.log("Clicked #attractBook");
 	$("#attractBook").css({opacity: 0});
 	$("#attractFilm").css({opacity: 0});
@@ -52,6 +53,7 @@ $("#attractBook").click(function(e) {
 });
 
 $("#attractFilm").click(function(e) {
+	clickSnd.play();
 	console.log("Clicked #attractFilm");
 	$("#attractBook").css({opacity: 0});
 	$("#attractFilm").css({opacity: 0});
@@ -68,6 +70,7 @@ $("#attractFilm").click(function(e) {
 });
 
 $(".backBttnFilm").click(function(e) {
+	clickSnd.play();
 	console.log("Clicked #attractFilm");
 	$("#attractBook").css({opacity: 1});
 	$("#attractFilm").css({opacity: 1});
@@ -218,18 +221,22 @@ $(".mapBttn").click(function(e) {
 
 
 function loadExcerpt () {
+	
 	$(".reports").fadeOut(200, function() {
+		clickSnd.play();
 		$(".reports").empty();
 		$reportText = $(ajResp.responseText);
 		var ID = $(".selected").attr("summaryid");
 		$( ".reports" ).append(header);
 		$( ".reports" ).append($reportText.find(".report[reportid='"+ ID + "']"));
 		$(".reports").fadeIn(200);
+		
 	});
 }
 
 
 $(".backBttn").click(function(e) {
+	clickSnd.play();
 	console.log("CurrentScreen: " + currentScreen);
 	if (currentScreen == 1) {
 		$("#attractBook").css({opacity: 1});
@@ -321,7 +328,7 @@ $( ".scroll-pane" ).on( "slidestart", function( event, ui ) {
 
 
 $(".adaBttn").click(function(e) {
-	
+	clickSnd.play();
 	if (adaEnabled) {
 		adaEnabled = false;
 		$(".dates").removeClass("adaEnabled");
