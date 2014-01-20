@@ -25,7 +25,7 @@ attractLoop();
 function attractLoop(){
 		
 	$("#attractBook").animate({left: "-=1280px"}, 15000, "linear", function() {
-		$("#attractBook").css({left: 1280, opacity:1});
+		$("#attractBook").css({left: 1280});
 		
 		$("#attractBook").animate({left: "-=1280px"}, 15000, "linear", function() {
 			attractLoop();
@@ -34,7 +34,7 @@ function attractLoop(){
 	});
 	
 	$("#attractFilm").animate({left: "-=2560px"}, 30000, "linear", function() {
-		$("#attractFilm").css({left: 1280, opacity:1});
+		$("#attractFilm").css({left: 1280});
 	});
 }
 
@@ -43,22 +43,45 @@ function attractLoop(){
 $("#attractBook").click(function(e) {
 	console.log("Clicked #attractBook");
 	$("#attractBook").css({opacity: 0});
-	$("#attractBook").css({opacity: 0});
+	$("#attractFilm").css({opacity: 0});
+	
 	$("#attractLoopBG").animate({opacity:0}, 250, function() {
 		$("#attractLoopBG").css({left: 8000});
 	});
 	currentScreen = 1;
 });
 
-/*$("#attractFilm").click(function(e) {
+$("#attractFilm").click(function(e) {
 	console.log("Clicked #attractFilm");
 	$("#attractBook").css({opacity: 0});
-	$("#attractBook").css({opacity: 0});
-	$("#attractLoopBG").animate({opacity:0}, 250, function() {
-		$("#attractLoopBG").css({left: 8000});
+	$("#attractFilm").css({opacity: 0});
+	$("#attractBook").toggleClass("disableClick");
+	$("#attractFilm").toggleClass("disableClick");
+	$("#filmWindow").animate({opacity:1}, 250, function() {
+		$("#filmWindow").prepend(videoHTML);
 	});
-	currentScreen = 1;
-});*/
+	$(".backBttnFilm").animate({opacity:1}, 250, function() {
+		
+	});
+	
+	currentScreen = 0;
+});
+
+$(".backBttnFilm").click(function(e) {
+	console.log("Clicked #attractFilm");
+	$("#attractBook").css({opacity: 1});
+	$("#attractFilm").css({opacity: 1});
+	$("#attractBook").toggleClass("disableClick");
+	$("#attractFilm").toggleClass("disableClick");
+	$("#filmWindow").animate({opacity:0}, 250, function() {
+		$("#filmWindow").empty();
+	});
+	$(".backBttnFilm").animate({opacity:0}, 250, function() {
+		
+	});
+	
+	currentScreen = 0;
+});
 
 
 function promptIdleUser() {   

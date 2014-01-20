@@ -96,6 +96,21 @@ p {
 	left:1280px;
 }
 
+#filmWindow {
+	position:absolute;
+	width:680px;
+	height:520px;
+	left:300px;
+	top:252px;
+	padding:20px;
+	background-color:black;
+	z-index:7;
+	opacity:0;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	pointer-events:none;
+}
+
 
 
 .hidden
@@ -155,7 +170,25 @@ p {
 	background-image:url('../IMAGES/BackArrow.png');
 	pointer-events:all;
 	opacity:1;
-	z-index:7;
+	z-index:9;
+}
+
+.backBttnFilm {
+	width:201px;
+	height:81px;
+	top:883px;
+	margin-left:25px;
+	float:left;
+	background-repeat:no-repeat;
+	background-image:url('../IMAGES/BackArrow.png');
+	pointer-events:all;
+	opacity:0;
+	z-index:9;
+	position:absolute;
+}
+
+.backBttnFilm:active {
+	background-image:url('../IMAGES/BackArrow_Touched.png');
 }
 
 .backBttn:active {
