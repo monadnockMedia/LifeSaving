@@ -79,6 +79,10 @@ p {
 	z-index:5;
 }
 
+#attractLoopBG.notext {
+	background-image:url('../IMAGES/AttractLoopBG.jpg');
+}
+
 #attractBook {
 	position:absolute;
 	z-index:6;

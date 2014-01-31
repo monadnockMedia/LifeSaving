@@ -59,6 +59,7 @@ $("#attractFilm").click(function(e) {
 	$("#attractFilm").css({opacity: 0});
 	$("#attractBook").toggleClass("disableClick");
 	$("#attractFilm").toggleClass("disableClick");
+	$("#attractLoopBG").toggleClass("notext");
 	$("#filmWindow").animate({opacity:1}, 250, function() {
 		$("#filmWindow").prepend(videoHTML);
 	});
@@ -72,6 +73,7 @@ $("#attractFilm").click(function(e) {
 $(".backBttnFilm").click(function(e) {
 	clickSnd.play();
 	console.log("Clicked #attractFilm");
+	$("#attractLoopBG").toggleClass("notext");
 	$("#attractBook").css({opacity: 1});
 	$("#attractFilm").css({opacity: 1});
 	$("#attractBook").toggleClass("disableClick");
@@ -128,12 +130,12 @@ function checkPosition() { //gets called every update when slider is moving
 	selectedCenter = (selectedHeight/2);
 	selectedMiddle = (selectedOffset.top + selectedCenter);
 
-	if (selectedMiddle < 185) {
+	if (selectedMiddle < 160) {
 		$(".selected").animate({opacity:0.01}, 150, function() {});
 		$(".selected + .summary").addClass("selected");
 		$(".selected").first().removeClass("selected");
 		loadExcerpt();
-	} else if (selectedMiddle > 420) {
+	} else if (selectedMiddle > 460) {
 		$(".selected").prev().addClass("selected");
 		$(".selected").last().removeClass("selected");
 		$(".selected").animate({opacity:1}, 150, function() {});
@@ -276,11 +278,11 @@ $( ".scroll-pane" ).on( "slidestop", function( event, ui ) {
 	checkPosition();
 	
 	//Calculate distance between middle of selection and middle of ribbon
-	if (selectedMiddle > 320) {
-		adjustDistance = selectedMiddle - 320;
+	if (selectedMiddle > 340) {
+		adjustDistance = selectedMiddle - 340;
 		adjustDistanceString = "-=" + adjustDistance.toString();
-	} else if (selectedMiddle < 320) {
-		adjustDistance = 320 - selectedMiddle;
+	} else if (selectedMiddle < 340) {
+		adjustDistance = 340 - selectedMiddle;
 		adjustDistanceString = "+=" + adjustDistance.toString();
 	}
 	
@@ -301,11 +303,11 @@ function fakeClick() {
 	checkPosition();
 	
 	//Calculate distance between middle of selection and middle of ribbon 310
-	if (selectedMiddle > 320) {
-		adjustDistance = selectedMiddle - 320;
+	if (selectedMiddle > 340) {
+		adjustDistance = selectedMiddle - 340;
 		adjustDistanceString = "-=" + adjustDistance.toString();
-	} else if (selectedMiddle < 320) {
-		adjustDistance = 320 - selectedMiddle;
+	} else if (selectedMiddle < 340) {
+		adjustDistance = 340 - selectedMiddle;
 		adjustDistanceString = "+=" + adjustDistance.toString();
 	}
 	
