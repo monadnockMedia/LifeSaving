@@ -41,6 +41,7 @@ function attractLoop(){
 
 
 $("#attractBook").click(function(e) {
+	userStarted();
 	clickSnd.play();
 	console.log("Clicked #attractBook");
 	$("#attractBook").css({opacity: 0});
@@ -53,6 +54,7 @@ $("#attractBook").click(function(e) {
 });
 
 $("#attractFilm").click(function(e) {
+	userStarted();
 	clickSnd.play();
 	console.log("Clicked #attractFilm");
 	$("#attractBook").css({opacity: 0});
@@ -71,6 +73,7 @@ $("#attractFilm").click(function(e) {
 });
 
 $(".backBttnFilm").click(function(e) {
+	userStarted();
 	clickSnd.play();
 	console.log("Clicked #attractFilm");
 	$("#attractLoopBG").toggleClass("notext");
@@ -118,7 +121,7 @@ function promptIdleUser() {
 function userStarted() {
 	clearInterval(idleTimer);
 	console.log("Clear Interval");
-	idleTimer = setInterval(promptIdleUser, 120000); // 30000
+	idleTimer = setInterval(promptIdleUser, 210000); // 30000
 }
 
 
