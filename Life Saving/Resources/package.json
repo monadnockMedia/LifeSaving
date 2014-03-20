@@ -1,13 +1,14 @@
 {
   "main": "index.html",
-  "name": "story_behind_a_name",
+  "name": "life_saving",
   "description": "NGLApp",
   "version": "0.1.0",
   "keywords": [ "monadnock", "node-webkit" ],
   "window": {
-    "title": "Story Behind a Name",
+    "title": "Life Saving",
     "toolbar": true,
     "frame": false,
+	"kiosk": true,
     "width": 1280,
     "height": 1024
   },
